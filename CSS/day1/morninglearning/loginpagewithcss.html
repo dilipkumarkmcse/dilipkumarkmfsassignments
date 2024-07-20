@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .login{
+            position: absolute;
+            border: 1px solid;
+            padding: 10px;
+            border-radius: 25px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        table{
+            text-align: center;
+            height: 40vh;
+            width: 20vw;
+            border-collapse: collapse;
+        }
+        table th{
+            font-size: 36px;
+        }
+        table td{
+            font-size: 20px;
+        }
+        table input{
+            padding: 9px;
+            border-radius: 15px;
+        }
+        table button{
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <table>
+            <tr><th colspan="2">Login Page</th></tr>
+            <tr><td>Username</td><td><input type="text" required></td></tr>
+            <tr><td>Password</td><td><input type="password" required></td></tr>
+            <tr><td colspan="2"><a href="./registerpagewithcss.html"><button type="submit">Login</button></a></td></tr>
+        </table>
+    </div>
+</body>
+</html>

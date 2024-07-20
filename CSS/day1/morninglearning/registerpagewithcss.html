@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .register{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        table{
+            text-align: center;
+            height: 40vh;
+            width: 30vw;
+            border-collapse: collapse;
+        }
+        table th{
+            font-size: 36px;
+            padding-bottom: 15px;
+        }
+        table td{
+            font-size: 20px;
+            padding-top:5px;
+        }
+        table input{
+            padding: 9px;
+            border-radius: 15px;
+        }
+        table button{
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 15px;
+        }
+        table select{
+            padding: 10px;
+            border-radius: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="register">
+        <table>
+            <tr><th colspan="2">Registration Page</th></tr>
+            <tr><td>Firstname</td><td><input type="text"></td></tr>
+            <tr><td>Lastname</td><td><input type="text"></td></tr>
+            <tr><td>Email</td><td><input type="email"></td></tr>
+            <tr><td>D.O.B</td><td><input type="date"></td></tr>
+            <tr><td>Username</td><td><input type="text"></td></tr>
+            <tr><td>Password</td><td><input type="password"></td></tr>
+            <tr><td>Confirm Password</td><td><input type="password"></td></tr>
+            <tr><td>Mobile Number</td><td><input type="number"></td></tr>
+            <tr><td>Gender</td><td><input type="radio" name="Gender">Male
+            <input type="radio" name="Gender">Female</td></tr>
+            <tr><td>Skills</td><td>
+                <input type="checkbox">C
+                <input type="checkbox">C++
+                <input type="checkbox">Java
+            </td></tr>
+            <tr><td>Cities</td><td>
+                <select><option value="Salem">Salem</option>
+                    <option value="Erode">Erode</option>
+                    <option value="Vellore">Vellore</option>
+            </td></tr>
+            <tr><td colspan="2"><a href="./loginpagewithcss.html"><button type="submit">Register</button></a></td></tr>
+        </table>
+    </div>
+</body>
+</html>
