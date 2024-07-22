@@ -17,12 +17,11 @@
 }
 .gallery{
     border: 1px solid black;
-    border-top: 10px solid;
     display: grid;
     padding: 10px;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-evenly;
-    width: 50vw;
+    width: 70vw;
     height: 70vh;
     grid-template-columns: auto auto auto auto;
 }
