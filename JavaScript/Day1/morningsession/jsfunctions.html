@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myf(){
+            document.write("<b>JS Function Example</b>");
+        }
+        function add(a,b){
+            let s=a+b;
+            document.write("<b>Add</b>:"+s);
+        }
+        function sub(a,b){
+            let s=Math.abs(a-b);
+            document.write("<b>Diff</b>:"+s);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myf()">submit</button><br>
+    <button onclick="add(10,20)">submit</button><br>
+    <button onclick="sub(10,20)">submit</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <Script>
+        function pal(){
+            var a = document.getElementById("s1").value;
+            let b="";
+            for(let i=a.length-1;i>=0;i--){
+                b+=a.charAt(i);
+            }
+            if(b==a){
+                document.getElementById("pri").innerHTML="palindrome"
+            }
+            else{
+                document.getElementById("pri").innerHTML="not palindrome";
+            }
+        }
+    </Script>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="s1" placeholder="Enter the String" onfocus="this.value=''" onblur="pal()"><br>
+        <button onclick="pal()">Check</button>
+        <p id="pri"></p>
+    </div>
+</body>
+</html>

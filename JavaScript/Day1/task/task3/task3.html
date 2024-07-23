@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <script>
+        function patt(){
+            var p="";
+            var a =document.getElementById("pat").value;
+            for(let i=0;i<a;i++){
+                for(let j=0;j<=i;j++){
+                    p+="*";
+                }
+                p+="<br>";
+            }
+            document.getElementById("pattern").innerHTML=p;
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="pat" placeholder="Enter no of rows" onfocus="this.value=''" onblur="patt()"><br>
+        <button onclick="patt()">Click</button>
+        <p id="pattern"></p>
+    </div>
+</body>
+</html>

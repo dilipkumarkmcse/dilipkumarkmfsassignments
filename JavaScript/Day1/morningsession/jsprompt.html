@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function w(){
+            alert("welcome to this page")
+        }
+        function myp() {
+            let n=prompt("enter");
+            alert("hello "+n);
+        }
+        function l(){
+            confirm("want to leave ?")
+        }
+    </script>
+</head>
+<body onload="w()" onunload="l()">
+    <button onclick="myp()">submit</button>
+</body>
+</html>

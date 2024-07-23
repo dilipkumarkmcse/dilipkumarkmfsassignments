@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value)
+            let s=document.getElementById("s").value;
+            let r="";
+            if(s=='a'){
+                r=a+b;
+            }
+            else if(s=='s'){
+                r=a-b;
+            }
+            else if(s=='m'){
+                r=a*b;
+            }
+            else if(s=='d'){
+                r=a/b;
+            }
+            document.getElementById("result").innerHTML=r;
+        }
+    </script>
+</head>
+<body>
+    Enter first number <input type="text" id="n1"><br>
+    Enter second number <input type="text" id="n2"><br>
+    <select id="s">
+        <option value="a">addition</option>
+        <option value="s">subraction</option>
+        <option value="m">multiply</option>
+        <option value="d">divide</option>
+    </select><br>
+    <button onclick="cal()">=</button>
+    <h1 id="result""></h1>
+</body>
+</html>

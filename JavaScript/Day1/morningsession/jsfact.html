@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fac(){
+            let a=document.getElementById("n1").value;
+            let b=1;
+            for(let i=1;i<=a;i++){
+                b*=i;
+            }
+            document.getElementById("fn").innerHTML=b;
+        }
+    </script>
+    <style>
+        body{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: salmon;
+        }
+        .main{
+            border: 1px solid;
+            width: 25vw;
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 8px;
+            align-items: center;
+            padding: 15px;
+        }
+        .f{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input,button{
+            width: 250px;  
+            font-size: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ffa500;
+        }
+        input::placeholder{
+            color: rgb(205, 142, 142);
+            text-align: center;
+        }
+        button:hover{
+            background-color: #ffa500;
+            color: white;
+        }
+        /* p{
+            font-size: 20px;
+            color:cyan;
+            font-weight: bold;
+            border: 1px solid;
+            padding: 10px;
+            border-radius: 5px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="f">
+            <input type="text" id="n1" placeholder="Enter the Number" onfocus="this.value=''"onblur="fac()"><br>
+            <button onclick="fac()">Find</button>
+        </div>
+        <p id="fn"></p>
+    </div>
+</body>
+</html>

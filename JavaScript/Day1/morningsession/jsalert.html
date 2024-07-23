@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(a,b){
+            let s=a+b;
+            alert("Add:"+s);
+        }
+        function sub(a,b){
+            let s=Math.abs(a-b);
+            alert("Sub:"+s);
+        }
+        function mul(a,b){
+            let s=Math.abs(a*b);
+            alert("Mul:"+s);
+        }
+        function div(a,b){
+            let s=Math.abs(a/b);
+            alert("Div:"+s);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="add(10,20)">Add</button><br>
+    <button onclick="sub(10,20)">sub</button><br>
+    <button onclick="mul(10,20)">Mul</button><br>
+    <button onclick="div(100,20)">Div</button>
+</body>
+</html>
