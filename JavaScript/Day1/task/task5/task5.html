@@ -20,6 +20,9 @@
         function c(){
             document.getElementById("demo").innerHTML="You Copied";
         }
+        function p(){
+            document.getElementById("dem").innerHTML="You Pasted";
+        }
     </script>
 </head>
 <body onload="w()">
@@ -29,6 +32,8 @@
     <p>Scrolled <span id="mw">0</span> times.</p>
     <input type="text" oncopy="c()">
     <p id="demo"></p>
+    <input type="text" onpaste="p()">
+    <p id="dem"></p>
     <button onclick="myp()">submit</button>
 </body>
 </html>
