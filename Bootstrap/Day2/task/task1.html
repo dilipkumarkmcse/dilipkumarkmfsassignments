@@ -13,42 +13,58 @@
 
 <body>
     <div class="container-fixed">
-        <nav class="pb-0 d-flex align-items-center bg-danger opacity-75 justify-content-between px-5">
-            <div class=" bg-danger">
+        <nav class="d-flex align-items-center bg-danger opacity-75 justify-content-between px-5">
+            <div>
               Brand Waali Quality, Bazaar Waali Deal!
             </div>
-            <div class="pb-0 bg-danger pt-2">
-                <ul class="list-inline d-flex justify-content-between align-items-center">
-                  <li class="list-inline-item mx-2"><a href="#" class="text-decoration-none text-black" title="Impact@Snapdeal">Impact@Snapdeal</a></li>
-                  <li class="list-inline-item mx-2"><a href="#" class="text-decoration-none text-black" title="Help Center">Help Center</a></li>
-                  <li class="list-inline-item mx-2"><a href="#" class="text-decoration-none text-black" title="Sell On Snapdeal">Sell On Snapdeal</a></li>
-                  <li class="list-inline-item mx-2"><a href="#" class="text-decoration-none text-black" title="Download App">Download App</a></li>
-                  <li class="list-inline-item mx-2"><a href="#" class="text-decoration-none text-black" title="Donate For Elderly">Donate For Elderly</a></li>
-                </ul>
+            <div>
+              <ul class="list-inline d-flex justify-content-between align-items-center mb-0">
+                <li class="list-inline-item mx-2">
+                  <a href="#" class="text-black text-decoration-none" title="Impact@Snapdeal" aria-label="Impact@Snapdeal">
+                    Impact@Snapdeal
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a href="#" class="text-black text-decoration-none" title="Help Center" aria-label="Help Center">
+                    Help Center
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a href="#" class="text-black text-decoration-none" title="Sell On Snapdeal" aria-label="Sell On Snapdeal">
+                    Sell On Snapdeal
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a href="#" class="text-black text-decoration-none" title="Download App" aria-label="Download App">
+                    Download App
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a href="#" class="text-black text-decoration-none" title="Donate For Elderly" aria-label="Donate For Elderly">
+                    Donate For Elderly
+                  </a>
+                </li>
+              </ul>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-lg p-2 bg-danger px-5">
+        <nav class="navbar navbar-expand-lg p-1 bg-danger px-5">
             <div class="container-fluid gap-3">
-                <img height="28" width="35" src="https://upload.wikimedia.org/wikipedia/en/3/35/Snapdeal_Logo_new.png">
+                <img height="28" width="35" src="https://upload.wikimedia.org/wikipedia/en/3/35/Snapdeal_Logo_new.png" alt="Snapdeal Logo">
                 <a class="navbar-brand text-white" href="#">Snapdeal</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex justify-content-center w-100">
-                        <form class="d-flex" role="search">
-                            <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-dark d-flex align-items-center" type="submit"><i class='bx bx-search-alt-2'></i>Search</button>
-                        </form>
-                    </div>
-                    <ul class="navbar-nav ms-auto w-25 gap-5">
+                    <form class="d-flex" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark d-flex align-items-center" type="submit" aria-label="Search Button"><i class='bx bx-search-alt-2'></i>Search</button>
+                    </form>
+                    <ul class="navbar-nav ml-auto gap-5">
                         <li class="nav-item">
-                            <a class="nav-link text-white d-flex align-items-center gap-1" href="#">Cart<i class='bx bx-cart' ></i></a>
+                            <a class="nav-link text-white d-flex align-items-center gap-1" href="#">Cart<i class='bx bx-cart'></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white d-flex align-items-center gap-1"  href="#">Sign In<i class='bx bx-cart' ></i></a>
+                            <a class="nav-link text-white d-flex align-items-center gap-1" href="#">Sign In<i class='bx bx-user'></i></a>
                         </li>
                     </ul>
                 </div>
@@ -87,30 +103,43 @@
                 <div class="px-4 mb-2"><i class='bx bx-search-alt-2'></i>Sandal Men</div>
                 <div class="px-4 mb-2"><i class='bx bx-search-alt-2'></i>Sports Shoe Men</div>
             </div>
-            <div class="mt-3 w-75 h-25 object-fit-cover rounded shadow-lg">
-                <div>
-                    <img src="https://ocdn.eu/sport-images-transforms/1/j78k9lGaHR0cHM6Ly9vY2RuLmV1L3B1bHNjbXMvTURBXy84MTk1NDk4My00YWJlLTQ3MDItYmE3Yy01MmUxNWM0NmJmZDEuanBlZ5OVA80BZM0Cw80FGs0C3pUCzQSwAMLDkwmmMWU0ZmI3Bt4AAqEwAaExAQ/papepajose-sena-goulao.jpeg"  class="rounded-top img-fluid" >
+            <div class="d-flex flex-column">
+                <div class="d-flex gap-3">
+                    <div class="mt-3 h-75 rounded shadow-lg mb-5 bg-body">
+                        <div class="rounded-top">
+                            <img src="https://www.mercurynews.com/wp-content/uploads/2018/04/afp_13o76i.jpg?w=978" height="350px"; width="890px"; class="object-fit-center pt-3 px-3" >
+                        </div>
+                        <div class="d-flex p-3 rounded-bottom shadow-lg mb-5 bg-body align-items-center justify-content-between">
+                            <div>ONDC</div>
+                            <div>BOB card</div>
+                            <div>ETHNIC WEAR</div>
+                            <div>KITCHENWARE</div>
+                            <div>HOME FURNISHING</div>
+                        </div>
+                    </div>
+                    <div class="rounded mt-3 w-25 h-75 shadow-lg p-3 bg-body">
+                        <div class="d-flex flex-column align-items-center ">
+                            <img src="https://www.sapphiresolutions.net/blog/wp-content/uploads/2023/01/Top-10-On-Demand-Courier-Delivery-Apps.png" width="200px" height="140px"  class="rounded">
+                            <p class="mt-2 pt-3 pb-0">Your Delivery Code</p>
+                            <p class="text-center p-1 pb-0">Enter your pincode to check availability and faster delivery options</p>
+                        </div>
+                        <div class="rounded-bottom align-items-center ">
+                            <input type="number" placeholder="Enter Pincode" class="border border-secondary w-100 p-2 rounded">
+                        </div>
+                        <div class="d-flex pt-3 rounded-bottom pb-5 justify-content-between gap-3">
+                            <button type="submit" class="bg-dark text-white rounded p-1 w-75">Submit</button>
+                            <button type="Next" class="text-dark p-1 rounded w-25 border-0">Next</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="d-flex p-3 align-items-center justify-content-between">
-                    <div class="text-decoration-none">ONDC</div>
-                    <div class="text-decoration-none">BOB card</div>
-                    <div class="text-decoration-none">ETHNIC WEAR</div>
-                    <div class="text-decoration-none">KITCHENWARE</div>
-                    <div class="text-decoration-none">HOME FURNISHING</div>
-                </div>
-            </div>
-            <div class="rounded mt-3 w-25 h-25 shadow-lg p-3 mb-5 bg-body">
-                <div class="d-flex flex-column align-items-center ">
-                    <img src="https://www.sapphiresolutions.net/blog/wp-content/uploads/2023/01/Top-10-On-Demand-Courier-Delivery-Apps.png" width="200px" class="rounded" alt="">
-                    <p class="mt-2">Your Delivery Code</p>
-                    <p class="text-center">Enter your pincode to check availability and faster delivery options</p>
-                </div>
-                <div class="d-flex flex-column rounded-bottom align-items-center ">
-                    <input type="number" placeholder="Enter Pincode" class="w-100 p-2 rounded">
-                </div>
-                <div class="d-flex pt-3 rounded-bottom justify-content-between gap-3">
-                    <button type="submit" class="bg-dark text-white rounded p-1 w-75">Submit</button>
-                    <button type="Next" class="text-dark p-1 rounded w-25 border-0">Next</button>
+                <div class="shadow-lg p-3 bg-body ">
+                    <div>
+                        <p>RECENTLY VIEWED PRODUCTS</p>
+                        
+                    </div>
+                    <div>
+    
+                    </div>
                 </div>
             </div>
         </div>

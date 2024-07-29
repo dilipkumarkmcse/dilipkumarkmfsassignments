@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Interpolation example</h1>
+  <b>
+    Name : {{ name }} <br>
+    Age : {{ age }} <br>
+    Email : <input type="text" value = "{{ email }}">
+  </b>
+  <br><br>
+  <h1>Property Binding</h1>
+  <b>
+    Name : <input type="text" [value]="name"><br>
+    Age : <input type="text" [value]="age"><br>
+    Email : <input type="text" [value]="email">
+  </b>
+  <br><br>
+  <h1>Event Binding</h1>
+  <button (click)="changeN()">ChangeName</button><br>
+  <button (click)="changeA()">ChangeAge</button><br>
+  <button (click)="changeE()">ChangeEmail</button><br><br>
+  <br><br>
+  <img [src]="imagepath" width="300px" height="300px"><br>
+  <button (click)="changeI()">ChangeImage</button>
+</body>
+</html>
