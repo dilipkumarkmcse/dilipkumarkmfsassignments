@@ -26,6 +26,28 @@
   <button (click)="changeE()">ChangeEmail</button><br><br>
   <br><br>
   <img [src]="imagepath" width="300px" height="300px"><br>
-  <button (click)="changeI()">ChangeImage</button>
+  <button (click)="changeI()">ChangeImage</button><br><br>
+  <h1>2 Way Binding</h1>
+  <input type="text" placeholder="Enter the name" [(ngModel)]="fname">
+  <h1>Welcome {{fname}}</h1>
+
+
+  <h1 [ngClass]="myclass">Structural and Attribute Directives</h1>
+  <button (click)="changeclass()">changeclass</button><br><br>
+  <button (click)="changeflag()">Show or Hide Div</button>
+  <div *ngIf="flag" [ngStyle]="mystyle">
+    <ul>
+      <li style="list-style:square" *ngFor="let p of players" (click)="show(p)">{{p}}</li>
+    </ul>
+    <br>
+    <h1>You are the star player : {{selectedplayer}}</h1><br>
+    <div [ngSwitch]="selectedplayer">
+      <font color="#FFA500" *ngSwitchCase="'CR7'">PORTUGAL</font>
+      <font color="#FFA500" *ngSwitchCase="'LM10'">ARGENTINA</font>
+      <font color="#FFA500" *ngSwitchCase="'NJ11'">BRAZIL</font>
+      <font color="#FFA500" *ngSwitchDefault>Invalid</font>
+    </div>
+    <button (click)="changestyle()">change style</button>
+  </div>
 </body>
 </html>
