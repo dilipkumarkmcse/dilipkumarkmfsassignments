@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CalculatorService } from './calculator.service';
+import { FinderService } from './finder.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ export class AppComponent {
   myclass : string;
   sum: number;
   diff: number;
-  constructor(private cal : CalculatorService){
+  mul: number;
+  constructor(private cal : CalculatorService, private fin : FinderService){
     this.name = "DK";
     this.age = 20;
     this.email = "dilip72765@gmail.com"
@@ -32,6 +34,7 @@ export class AppComponent {
     this.myclass = "one"
     this.sum = cal.getAdd(3,4)
     this.diff = cal.getSub(10,3)
+    this.mul = fin.getmul(7,3)
   }
   change(){
     this.name = "Cristiano Ronaldo Dos Santos Aveiro";

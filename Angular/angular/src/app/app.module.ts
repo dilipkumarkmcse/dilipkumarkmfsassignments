@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CalculatorService } from './calculator.service';
+import { FinderService } from './finder.service';
 
 const Route : Routes = [
   { path : 'home', component : HomeComponent},
@@ -31,7 +32,8 @@ const Route : Routes = [
   ],
   providers: [
     provideClientHydration(),
-    CalculatorService
+    CalculatorService,
+    FinderService
   ],
   bootstrap: [AppComponent]
 })
