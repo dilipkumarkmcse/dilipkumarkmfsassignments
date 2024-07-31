@@ -21,9 +21,9 @@
   </b>
   <br><br>
   <h1>Event Binding</h1>
-  <button (click)="changeN()">ChangeName</button><br>
-  <button (click)="changeA()">ChangeAge</button><br>
-  <button (click)="changeE()">ChangeEmail</button><br><br>
+  <button (click)="change()">Change</button><br>
+  <!-- <button (click)="change()">ChangeAge</button><br>
+  <button (click)="change()">ChangeEmail</button><br><br> -->
   <br><br>
   <img [src]="imagepath" width="300px" height="300px"><br>
   <button (click)="changeI()">ChangeImage</button><br><br>
@@ -44,10 +44,27 @@
     <div [ngSwitch]="selectedplayer">
       <font color="#FFA500" *ngSwitchCase="'CR7'">PORTUGAL</font>
       <font color="#FFA500" *ngSwitchCase="'LM10'">ARGENTINA</font>
-      <font color="#FFA500" *ngSwitchCase="'NJ11'">BRAZIL</font>
+     <font color="#FFA500" *ngSwitchCase="'NJ11'">BRAZIL</font>
       <font color="#FFA500" *ngSwitchDefault>Invalid</font>
     </div>
     <button (click)="changestyle()">change style</button>
   </div>
+  <app-home></app-home>
+  <app-about></app-about>
+  <app-contact></app-contact>
+
+  <table align="center">
+    <tr>
+      <th><a routerLink="home">Home</a></th>
+      <th><a routerLink="about">About</a></th>
+      <th><a routerLink="contact">Contact</a></th>
+    </tr>
+  </table>
+  <div>
+    Space for new component
+    <router-outlet></router-outlet>
+  </div>
+  ADD : {{sum}}
+  SUB : {{diff}}
 </body>
 </html>

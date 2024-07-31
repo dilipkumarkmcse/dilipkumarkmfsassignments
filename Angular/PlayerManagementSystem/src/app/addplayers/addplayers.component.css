@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* body{
+    background: url('https://studentprojectguide.com/wp-content/uploads/2020/01/Sports-Management-System.jpg') no-repeat;
+    background-size:contain;
+    width: 100vw;
+    height: 100vh;
+} */
+.container{
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.first{
+    font-weight: bold;
+    font-size: 50px;
+    padding: 30px;
+    margin: 10px;
+    width: 80%;
+    display: flex;
+    /* color: white; */
+    place-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 20px;
+}
+.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.second .one{
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 20px;
+}
+.second .subone{
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.second .subone button{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.second .one form{
+    display: flex;
+    flex-direction: column;
+}
+.second .one form input{
+    width: 30vw;
+    font-size: 20px;
+    padding: 8px;
+}
+.second .one form label{
+    width: 70%;
+    font-size: 20px;
+}
+.second .two{
+    width: 22vw;
+    height: 70vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 20px;
+}
+.second .two p{
+    font-size: 30px;
+    font-weight: bold;
+}
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 10px 0;
+}
