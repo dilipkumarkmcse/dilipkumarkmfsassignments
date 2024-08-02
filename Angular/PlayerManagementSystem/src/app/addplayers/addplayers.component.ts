@@ -6,26 +6,32 @@ import { Component } from '@angular/core';
   styleUrl: './addplayers.component.css'
 })
 export class AddplayersComponent {
-  player = {
-    number: null,
-    name: '',
-    club: ''
-  };
+name: string = '';
+loss: number | null = null;
+wins: number | null = null;
+gamesplayed: | null = null;
+jerseynumber: | null = null;
+club: string = '';
+nationality: string = '';
+age: | null = null;
 
-  savedPlayer: any = null;
-
-  onSubmit() {
-    this.savedPlayer = { ...this.player };
-  }
-
-  onDelete() {
-    this.savedPlayer = null;
-    this.player = { number: null, name: '', club: '' };
-  }
-
-  onUpdate() {
-    if (this.savedPlayer) {
-      this.savedPlayer = { ...this.player };
-    }
-  }
+displayn : string = '';
+displaya : number | null = null;
+displaycl : string = '';
+displayna : string = '';
+displayj : number | null = null;
+displayg : number | null = null;
+displayw : number | null = null;
+displayl : number | null = null;
+  
+  display(){
+    this.displayn = this.name;
+    this.displaya = this.age;
+    this.displaycl = this.club;
+    this.displayna = this.nationality;
+    this.displayj = this.jerseynumber;
+    this.displayg = this.gamesplayed;
+    this.displayw = this.wins;
+    this.displayl = this.loss;
+  } 
 }

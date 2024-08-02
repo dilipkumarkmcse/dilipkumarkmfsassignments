@@ -9,32 +9,68 @@
 </head>
 <body>
   <div class="container">
+    <div class="image"></div>
     <div class="first">
-        <p>Player's Management System</p>
+      <p>Player's Management System</p>
     </div>
     <div class="second">
-        <div class="one">
-            <form (ngSubmit)="onSubmit()">
-                <label for="jerseynumber">Enter your Jersey Number</label>
-                <input type="text" [(ngModel)]="player.number" name="jerseynumber" class="rounded-3 mb-3" required type="number">
-                <label for="name">Enter your Name</label>
-                <input type="text" [(ngModel)]="player.name" name="name" class="rounded-3 mb-3" required>
-                <label for="Club">Enter your Club</label>
-                <input type="text" [(ngModel)]="player.club" name="Club" class="rounded-3 mb-3" required>
-            </form>
-            <div class="subone">
-                <button type="submit" class="btn btn-success">Save</button>
-                <button type="button" class="btn btn-success" (click)="onUpdate()">Update</button>
-                <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+      <div class="one">
+        <form class="d-flex flex-row p-3">
+          <div class="sone">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" placeholder="Enter your Name" [(ngModel)]="name" name="name" class="rounded-3 mb-3" required>
             </div>
-        </div>
-        <div class="two pt-4">
-          <p class="d-flex justify-content-center">Player's Details</p>
-          <div class="horizontal-line"></div>
-          <div *ngIf="savedPlayer">
-            <p>number: {{ savedPlayer.number }} - name: {{ savedPlayer.name }} - club: {{ savedPlayer.club }}</p>
+            <div>
+              <label for="age">Age</label>
+              <input type="text" placeholder="Enter your Age"  [(ngModel)]="age" name="age" class="rounded-3 mb-3" required>
+            </div>
+            <div>
+              <label for="Nationality">Nationality</label>
+              <input type="text" placeholder="Enter Your Nationality" [(ngModel)]="nationality" name="Nationality" class="rounded-3 mb-3" required>
+            </div>
+            <div>
+              <label for="Club">Club</label>
+              <input type="text" name="Club" placeholder="Enter your Club" [(ngModel)]="club" class="rounded-3 mb-3" required>
+            </div>
           </div>
-        </div>
+          <div class="w-100"></div>
+          <div class="stwo">
+            <div>
+              <label for="jerseynumber">Jersey Number</label>
+              <input type="number" name="jerseynumber" class="rounded-3 mb-3" [(ngModel)]="jerseynumber" placeholder="Enter your Jersey Number" required type="number">
+            </div>
+            <div>
+              <label for="Games played">Games Played</label>
+              <input type="number" name="Games played" class="rounded-3 mb-3" [(ngModel)]="gamesplayed" placeholder="Enter the Number of games played" required type="number">
+            </div>
+            <div>
+              <label for="Wins">Total Wins</label>
+              <input type="number" name="Wins" class="rounded-3 mb-3" [(ngModel)]="wins" placeholder="Enter the Number of total wins" required type="number">
+            </div>
+            <div>
+              <label for="loss">Total Loss</label>
+              <input type="number" name="loss" class="rounded-3 mb-3" [(ngModel)]="loss" placeholder="Enter the Number of total loss" required type="number">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="two">
+        <button type="submit" class="btn btn-success" (click)="display()">Save</button>
+        <button type="button" class="btn btn-success">Update</button>
+        <button type="button" class="btn btn-success">Find</button>
+        <button type="button" class="btn btn-success">Find All</button>
+        <button type="button" class="btn btn-danger" >Delete</button>
+      </div>
+    </div>
+    <div class="third">
+      <p>Player's Details</p>
+      <div class="horizontal"></div>
+      <table>
+        <tr><th>Player Name</th><th>Age</th><th>Nationality</th><th>Club</th><th>Jerseynumber</th><th>Games Played</th><th>Wins</th><th>Loss</th></tr>
+        <tr><td>{{displayn}}</td><td>{{displaya}}</td><td>{{displayna}}</td><td>{{displaycl}}</td><td>{{displayj}}</td><td>{{displayg}}</td><td>{{displayw}}</td><td>{{displayl}}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </body>
