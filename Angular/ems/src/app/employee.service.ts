@@ -3,16 +3,41 @@ import { Employee } from './model/Employee';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EmployeeService {
-  private url = 'http://localhost:3004/employees';
-  constructor(private http: HttpClient) {}
-  addEmployee(employee: Employee): Promise<void> {
-    return this.http.post<void>(this.url, employee).toPromise();
+  url: string;
+  employeeArr: Employee[];
+  employee: Employee;
+  constructor(private http: HttpClient) {
+    this.url = 'http://localhost:3005/employees';
+    this.employee = new Employee();
+    this.employeeArr = [];
   }
-  getEmployees(): Promise<Employee[]> {
-    return this.http.get<Employee[]>(this.url).toPromise()
-      .then(data => data || []);
+
+  insertEmployee(employee: Employee) {
+    this.http.post<Employee>(this.url, employee).subscribe();
+    return 'Employee Details Added';
+  }
+  deleteEmployee(empId: number) {
+    this.http.delete<Employee>(this.url + '/' + empId).subscribe();
+    return 'Employee Details Deleted';
+  }
+  updateEmployee(employee: Employee) {
+    this.http.put<Employee>(this.url + '/' + employee.id, employee).subscribe();
+    return 'Employee Details Updated';
+  }
+  findEmployee(empId: number) {
+    this.http
+      .get<Employee>(this.url + '/' + empId)
+      .subscribe((data) => (this.employee = data));
+    return this.employee;
+  }
+
+  findAllEmployee() {
+    this.http
+      .get<Employee[]>(this.url)
+      .subscribe((data) => (this.employeeArr = data));
+    return this.employeeArr;
   }
 }

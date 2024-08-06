@@ -1,0 +1,28 @@
+{
+  "players": [
+    {
+      "id": "123",
+      "pname": "Cristiano Ronaldo Dos Santos Aveiro",
+      "page": "39",
+      "pnationality": "Portugal",
+      "pclub": "Alnassar",
+      "pjerseyno": "7",
+      "pgamesplayed": "1200",
+      "pgoals": "995",
+      "pwins": "1160",
+      "ploss": "40"
+    },
+    {
+      "id": "234",
+      "pname": "Dilip Kumar K M",
+      "page": "37",
+      "pnationality": "Indian",
+      "pclub": "MLS",
+      "pjerseyno": "122",
+      "pgamesplayed": "1090",
+      "pgoals": "845",
+      "pwins": "900",
+      "ploss": "29"
+    }
+  ]
+}

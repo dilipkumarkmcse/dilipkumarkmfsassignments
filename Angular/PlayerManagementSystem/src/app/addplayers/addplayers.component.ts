@@ -1,37 +1,59 @@
 import { Component } from '@angular/core';
+import { Players } from './model/Players';
+import { PlayerService } from '../player.service';
 
 @Component({
   selector: 'app-addplayers',
   templateUrl: './addplayers.component.html',
-  styleUrl: './addplayers.component.css'
+  styleUrls: ['./addplayers.component.css']
 })
-export class AddplayersComponent {
-name: string = '';
-loss: number | null = null;
-wins: number | null = null;
-gamesplayed: | null = null;
-jerseynumber: | null = null;
-club: string = '';
-nationality: string = '';
-age: | null = null;
+export class AddplayersComponent {  
+  player : Players ;
+  result : string
+  playerArr : Players[];
+  flag:boolean=false;
 
-displayn : string = '';
-displaya : number | null = null;
-displaycl : string = '';
-displayna : string = '';
-displayj : number | null = null;
-displayg : number | null = null;
-displayw : number | null = null;
-displayl : number | null = null;
-  
-  display(){
-    this.displayn = this.name;
-    this.displaya = this.age;
-    this.displaycl = this.club;
-    this.displayna = this.nationality;
-    this.displayj = this.jerseynumber;
-    this.displayg = this.gamesplayed;
-    this.displayw = this.wins;
-    this.displayl = this.loss;
-  } 
+  constructor(private service : PlayerService){
+    this.player = new Players();
+    this.result = "";
+    this.playerArr =[];
+  }
+
+ insert(data : any) {
+  this.player.id = data.pId;
+  this.player.pname = data.pname;
+  this.player.page = data.page;
+  this.player.pnationality = data.pnationality;
+  this.player.pclub = data.pclub;
+  this.player.pjerseyno = data.pjerseyno;
+  this.player.pgamesplayed = data.pgamesplayed;
+  this.player.pgoals = data.pgoals;
+  this.player.pwins = data.pwins;
+  this.player.ploss = data.ploss;
+  this.result=this.service.insert(this.player);
+ }
+ update(data:any){
+  this.player.id = data.pId;
+  this.player.pname = data.pname;
+  this.player.page = data.page;
+  this.player.pnationality = data.pnationality;
+  this.player.pclub = data.pclub;
+  this.player.pjerseyno = data.pjerseyno;
+  this.player.pgamesplayed = data.pgamesplayed;
+  this.player.pgoals = data.pgoals;
+  this.player.pwins = data.pwins;
+  this.player.ploss = data.ploss;
+  this.result=this.service.update(this.player);
+ }
+ deleteplayer(data:any){
+  this.result=this.service.deleteplayer(data.pId);
+ }
+ find(data:any){
+  this.player=this.service.find(data.pId);
+  this.result=this.player.id+" "+this.player.pname+" "+this.player.page+" "+this.player.pnationality+" "+this.player.pclub+" "+this.player.pjerseyno+" "+this.player.pgamesplayed+" "+this.player.pgoals+" "+this.player.pwins+" "+this.player.ploss;
+ }
+ findAll() {
+  this.playerArr=this.service.findAll();
+  this.flag=true;
+ }
 }
