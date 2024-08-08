@@ -1,0 +1,10 @@
+create table student(Rollno number(10), Name varchar(30), Dept varchar(7));
+insert into student(1,'aaaa','cse');
+insert into student(2,'bbbb','it');
+insert into student(3,'cccc','cyber');
+insert into student(1,'dddd','eee');
+update student set dept= ece where Rollno=3;
+delete from student where Rollno=3;
+select distinct Rollno from student;
+commit;
+rollback;
